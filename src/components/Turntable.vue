@@ -12,7 +12,7 @@
       :textColor="textColor"
     />
     <div class="reset">
-      <button class="reset-btn" @click="">重置</button>
+      <button class="reset-btn" @click="resetData">重置</button>
     </div>
   </div>
 </template>
@@ -46,16 +46,16 @@ export default {
       this.awards.splice(this.currIndex, 1)
       this.rate = this.rate - 10
     },
-    // resetData() {
-    //   this.awards = [
-    //     { name: '离线平台', color: '#368ff7' },
-    //     { name: '实时平台', color: '#3d8f92' },
-    //     { name: 'Kafka', color: '#f9efbb' },
-    //     { name: 'Hadoop', color: '#ffa384' }
-    //   ],
-    //   this.currIndex = 0
-    //   this.rate = 40
-    // }
+    resetData() {
+      this.awards = [
+        { name: '离线平台', color: '#368ff7' },
+        { name: '实时平台', color: '#3d8f92' },
+        { name: 'Kafka', color: '#f9efbb' },
+        { name: 'Hadoop', color: '#ffa384' }
+      ],
+      this.currIndex = 0
+      this.rate = 40
+    }
   }
 }
 </script>
